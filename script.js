@@ -30,20 +30,21 @@ const answer_b=document.getElementById('text_b');
 const answer_c=document.getElementById('text_c');
 const answer_d=document.getElementById('text_d');
 
-loadQuiz();
+
 
 let currentQuiz= 0;
 
-function loadQuiz(){
-    currentQuizData=quizData(currentQuiz);
+loadQuiz();
 
-    questionText=currentQuizData.question;
-    answer_a=currentQuizData.a;
-    answer_b=currentQuizData.b;
-    answer_c=currentQuizData.c;
-    answer_d=currentQuizData.d;
+function loadQuiz(){
+   const currentQuizData=quizData[currentQuiz];
+
+    questionText.innerText=currentQuizData.question;
+    answer_a.innerText=currentQuizData.a;
+    answer_b.innerText=currentQuizData.b;
+    answer_c.innerText=currentQuizData.c;
+    answer_d.innerText=currentQuizData.d;
 
 }
 
-console.log(loadQuiz);
 
