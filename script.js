@@ -43,10 +43,14 @@ function loadQuestion(){
     answer_b.innerText=currentQuestionData.b;
     answer_c.innerText=currentQuestionData.c;
     answer_d.innerText=currentQuestionData.d;
-    currentQuestion++;
 
 }
 submitButton.addEventListener('click', ()=>{
     currentQuestion++;
-    loadQuestion();
+    
+    if(currentQuestion < quizData.length){
+        loadQuestion();
+    }else{
+        alert('Your are finished the quiz');
+    }
 })
