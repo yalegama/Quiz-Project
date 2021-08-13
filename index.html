@@ -8,7 +8,37 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>-- Quiz --</h1>
+    <div>
+        <h1>-- Quiz --</h1>
+    </div>
+    <div class="blok">
+        <div class="question">
+            <h2 id="question" class="question">Question</h2>
+        </div>
+
+        <div>
+            <ul>
+                <li><input type="radio"  id="a" name="answer">
+                    <label for="b" id="text_a">Answers</label>
+                </li>
+
+                <li><input type="radio"  id="b" name="answer">
+                    <label for="a" id="text_b">Answers</label>
+                </li>
+
+                <li><input type="radio"  id="c" name="answer">
+                    <label for="c" id="text_c">Answers</label>
+                </li>
+
+                <li><input type="radio"  id="d" name="answer">
+                    <label for="d" id="text_d">Answers</label>
+                </li>
+
+            </ul>
+            <button type="button" class="button" onclick="loadQuiz()">Submit</button>
+        </div>
+
+    </div>
 </body>
 <script src="./script.js"></script>
 </html>
