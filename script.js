@@ -19,11 +19,18 @@ const list=[
         b:'ranil',
         c:'sajith',
         d:'patali',
+    },
+    {
+        question:"What is the sum of 2+2",
+        a:"4",
+        b:'5',
+        c:'8',
+        d:"7"
     }
 ];
 
-
-
+let answers=["b","b","a"];
+let ans=0;
 
 
 
@@ -59,8 +66,5 @@ button.addEventListener('click',function(){
     currentItem++;
     if(currentItem>list.length-1){
         alert("You are finish");
-    }
-    list.forEach(function check(value,index,array){
-        if()
-    });
+    }loading(currentItem);
 });
