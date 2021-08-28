@@ -37,6 +37,7 @@ h1 {
   height: 40px;
   color: #b8c6db;
   border-radius: 20px;
+  cursor: pointer;
 }
 button:hover {
   background-color: yellow;

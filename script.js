@@ -1,56 +1,66 @@
-quizData=[
+const list=[
     {
-        question: 'What is the capital of Sri Lanka',
-        a: 'kandy',
-        b: 'Sri Jayawardanapura Kotte',
-        c: 'Colombo',
-        d: 'Galle',
-        answer: 'b'
+        question:"What is the capital of Sri Lanka",
+        a:"Colombo",
+        b:"Sri Jayawardanapura Kotte",
+        c:"Kandy",
+        d:"Gampaha"
     },
     {
-        question: 'Who is the priministar of Sri Lanka',
-        a: 'Mahinda Rajapaksa',
-        b: 'Ranil Wickramasinghe',
-        c: 'sajith Premadasa',
-        d: 'Anurakumara Dissanayake',
-        answer: 'a'
+        question:"What is the national sport in Sri Lanka",
+        a:"Cricket",
+        b:"VollyBall",
+        c:"FootBall",
+        d:"BatMinton"
     },
     {
-        question: 'What is the national sport in Sri Lanka',
-        a: 'FootBall',
-        b: 'Cricket',
-        c: 'VollyBall',
-        d: 'Batminton',
-        answer: 'c'
+        question:"Who is the priminister of Sri Lanka",
+        a:'mahinda',
+        b:'ranil',
+        c:'sajith',
+        d:'patali',
     }
-]
+];
 
-var questions=document.getElementById('question');
-var answer_a=document.getElementById('text_a');
-var answer_b=document.getElementById('text_b');
-var answer_c=document.getElementById('text_c');
-var answer_d=document.getElementById('text_d');
-var submitButton=document.getElementById('button');
 
-let currentQuestion=0;
 
-loadQuestion();
-function loadQuestion(){
-    const currentQuestionData=quizData[currentQuestion];
 
-    questions.innerText=currentQuestionData.question;
-    answer_a.innerText=currentQuestionData.a;
-    answer_b.innerText=currentQuestionData.b;
-    answer_c.innerText=currentQuestionData.c;
-    answer_d.innerText=currentQuestionData.d;
 
+
+/***selecting  */
+
+let question=document.getElementById('question');
+let answer_a=document.getElementById('text_a');
+let answer_b=document.getElementById('text_b');
+let answer_c=document.getElementById('text_c');
+let answer_d=document.getElementById('text_d');
+let button=document.getElementById('button');
+
+
+/***creating variable for loading function */
+
+let currentItem=0;
+
+/***calling loading function */
+loading();
+
+/***making loading function */
+
+function loading(){
+    const item=list[currentItem];
+    question.innerText=item.question;
+    answer_a.innerText=item.a;
+    answer_b.innerText=item.b;
+    answer_c.innerText=item.c;
+    answer_d.innerText=item.d;
 }
-submitButton.addEventListener('click', ()=>{
-    currentQuestion++;
-    
-    if(currentQuestion < quizData.length){
-        loadQuestion();
-    }else{
-        alert('Your are finished the quiz');
+
+button.addEventListener('click',function(){
+    currentItem++;
+    if(currentItem>list.length-1){
+        alert("You are finish");
     }
-})
+    list.forEach(function check(value,index,array){
+        if()
+    });
+});
